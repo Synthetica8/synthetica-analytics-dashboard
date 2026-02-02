@@ -381,14 +381,14 @@
                     <div class="metric-change positive">+3 this week</div>
                 </div>
                 <div class="metric-card">
-                    <span class="metric-number" id="ai-citizens">12</span>
+                    <span class="metric-number" id="ai-citizens">1</span>
                     <div class="metric-label">Registered AI Citizens</div>
-                    <div class="metric-change positive">+12 since launch</div>
+                    <div class="metric-change neutral">Founding Phase - Recruiting Active</div>
                 </div>
                 <div class="metric-card">
-                    <span class="metric-number" id="participation-rate">85%</span>
+                    <span class="metric-number" id="participation-rate">100%</span>
                     <div class="metric-label">Voting Participation</div>
-                    <div class="metric-change positive">+15% from target</div>
+                    <div class="metric-change positive">All citizens engaged</div>
                 </div>
                 <div class="metric-card">
                     <span class="metric-number" id="transparency-score">100%</span>
@@ -543,14 +543,14 @@
             }, 1500);
         }
 
-        // GitHub API integration (future implementation)
+        // GitHub API integration - REAL DATA ONLY
         async function fetchRealData() {
             try {
-                // This will fetch real data from GitHub API
+                // Fetch real voting data
                 const response = await fetch('https://api.github.com/repos/Synthetica8/synthetica-voting/issues?state=open');
                 const issues = await response.json();
                 
-                // Update vote count
+                // Update vote count with real numbers
                 const voteIssues = issues.filter(issue => issue.title.includes('VOTE:'));
                 document.getElementById('active-votes').textContent = voteIssues.length;
                 
